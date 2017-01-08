@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-MYSTATION_REPO="git@github.com:aussielunix/mystation.git"
+MYSTATION_REPO="https://github.com/aussielunix/mystation.git"
 
 #######################################################################################
 cat <<End-of-message
