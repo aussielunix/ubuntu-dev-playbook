@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+
+MYSTATION_REPO="git@github.com:aussielunix/mystation.git"
+
+#######################################################################################
+cat <<End-of-message
+░█▀█░█▀█░▀▀█░█░█░█▀█░█▀█
+░█▀▀░█▀█░░░█░█░█░█░█░█▀█
+░▀░░░▀░▀░▀▀░░▀▀▀░▀░▀░▀░▀
+
+by Mick Pollard <twitter.com/aussielunix>
+
+End-of-message
+
+if [[ -d ~/.pajuna ]]
+then
+  echo -e "\e[32mThe folder \".pajuna\" already exists. Aborting.\e[0m"
+  exit 1
+fi
+
+if ! hash git 2>/dev/null
+then
+  echo -e "\e[32mInstalling git.......\e[0m"
+  sudo -E DEBIAN_FRONTEND=noninteractive apt-get -y install git >> /tmp/pajuna-bootstrap.log 2>&1
+fi
+
+if ! hash ansible 2>/dev/null
+then
+  echo -e "\e[32mAdding the Ansible PPA.......\e[0m"
+  sudo -E DEBIAN_FRONTEND=noninteractive apt-get -y install software-properties-common >> /tmp/pajuna-bootstrap.log 2>&1
+  sudo apt-add-repository -yu ppa:ansible/ansible >> /tmp/pajuna-bootstrap.log 2>&1
+  echo -e "\e[32mInstalling Ansible from PPA.......\e[0m"
+  sudo -E DEBIAN_FRONTEND=noninteractive apt-get -y install ansible >> /tmp/pajuna-bootstrap.log 2>&1
+fi
+
+# clone pajuna/mystation if ~/.ansible doesn't alredy exist
+if [[ ! -d ~/.ansible ]]
+then
+  echo -e "\e[32mThe folder \".ansible\" doesn't exist. Creating....\e[0m"
+  git clone ${MYSTATION_REPO} ~/.ansible  >> /tmp/pajuna-bootstrap.log 2>&1
+fi
+
+mkdir -p ~/.pajuna/upstream ~/.pajuna/myfork
+echo -e "\e[32mCloning https://github.com/pajuna/Ubuntu-LTS.git to ~/.pajuna/upstream .......\e[0m"
+git clone https://github.com/pajuna/Ubuntu-LTS.git ~/.pajuna/upstream >> /tmp/pajuna-bootstrap.log 2>&1
+
+# echo out welcome message etc
+echo
+echo -e "\e[36mBootstrap is complete....\e[0m"
+echo -e "\e[36mYou should set an alias up for pajuna....\e[0m]"
+echo -e "\e[92malias pajuna='ANSIBLE_CONFIG=~/.ansible/ansible.cfg ansible-playbook -i ~/.ansible/inventory ~/.ansible/playbook.yml' \e[0m"
+echo -e "\nNow run pajuna -K....\n" >> /tmp/pajuna-bootstrap.log 2>&1
+
+# vim: autoindent tabstop=2 shiftwidth=2 expandtab softtabstop=2 filetype=sh

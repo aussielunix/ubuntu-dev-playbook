@@ -1,0 +1,22 @@
+# my workstation specific settings.
+
+---
+
+user: ubuntu
+vimrc_repo: "https://github.com/pajuna/vimrc.git"
+
+dotfiles_repo: "https://github.com/pajuna/dotfiles.git"
+dotfiles_files:
+  - .bash_alias
+  - .profile
+  - .bashrc
+  - .profile.d
+  - .bash_logout
+
+rbenv_ruby_versions:
+  - 2.2.3
+rbenv_default_ruby_version: 2.2.3
+
+misc_packages:
+  - curl
+  - git

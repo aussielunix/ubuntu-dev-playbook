@@ -1,0 +1,25 @@
+##
+# Ansible playbook for setting up a Lubuntu Trusty LTS Workstation
+#
+
+---
+- hosts: local
+  become: no
+
+  vars_files:
+    - settings.yml
+
+  pre_tasks:
+    - name: create /bin/src/tmp dir
+      file: path="{{item}}" state=directory mode=0755
+      with_items:
+        - ~/bin
+        - ~/src
+        - ~/pkg
+        - ~/tmp
+
+  roles:
+    - dotfiles  # Must be first
+    - misc      # generic role / dumping ground
+    - vim       # vim + vim dotfiles
+#    - rbenv     # install rbenv and ruby
