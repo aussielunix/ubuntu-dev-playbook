@@ -7,16 +7,62 @@ vimrc_repo: "https://github.com/pajuna/vimrc.git"
 
 dotfiles_repo: "https://github.com/pajuna/dotfiles.git"
 dotfiles_files:
-  - .bash_alias
-  - .profile
-  - .bashrc
-  - .profile.d
+  - .alias
   - .bash_logout
+  - .bashrc
+  - .gitconfig
+  - .gitignore
+  - .gnupg
+  - .packagecloud
+  - .profile.d
+  - .purple
+  - .themes
+  - .bash_profile
 
 rbenv_ruby_versions:
+  - 2.1.5
   - 2.2.3
 rbenv_default_ruby_version: 2.2.3
 
 misc_packages:
+  - arandr
   - curl
   - git
+  - imagemagick
+  - ipcalc
+  - jwhois
+  - jq
+  - libavcodec-extra
+  - libsqlite3-dev
+  - libmysqlclient-dev
+  - mc
+  - nmap
+  - sasl2-bin
+  - screen
+  - tree
+  - ubuntu-restricted-extras
+  - unzip
+  - xscreensaver
+  - xscreensaver-screensaver-bsod
+
+packagecloud:
+  repository: 'aussielunix/tools'
+  os: 'ubuntu'
+  version: 'xenial'
+
+terraform:
+  url: "https://releases.hashicorp.com/terraform/0.7.10/terraform_0.7.10_linux_amd64.zip"
+  tmp_dest: "/tmp/terraform.zip"
+  install_dest: "{{ lookup('env','HOME')}}/bin/"
+  checksum: "sha256:a6da76d6228349855f7c503b769fb231e6b1009add5e5b2586ecb7624e9ecf15."
+
+boshinit:
+  url: "https://s3.amazonaws.com/bosh-init-artifacts/bosh-init-0.0.98-linux-amd64"
+  dest: "{{ lookup('env','HOME')}}/bin/bosh-init"
+  checksum: "sha256:1800652511bcad3864d3062b19d1ac194f4176e1f9a1d3b136499e4aef15db34"
+
+fly:
+  url: "https://github.com/concourse/fly/releases/download/v2.3.2-rc.2/fly_linux_amd64"
+  dest: "{{ lookup('env','HOME')}}/bin/fly"
+  checksum: "sha256:86876eca3835effd86a79ffc06810df14dbeddaeb0956ddc52278be8e63e0ddf"
+

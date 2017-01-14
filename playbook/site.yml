@@ -20,6 +20,25 @@
 
   roles:
     - dotfiles  # Must be first
+    - aussielunix.python
+    - awscli
+    - bosh-init
+    - capotej.packagecloud
+    - cf-cli
+    - conky
+    - direnv
+    - dropbox
+    - fly
+    - googlechrome
+    - keepass2
+    - lubuntu
+    - mkdocs
     - misc      # generic role / dumping ground
-    - vim       # vim + vim dotfiles
-#    - rbenv     # install rbenv and ruby
+    - ntp
+    - rbenv
+    - slack
+    - terminator
+    - terraform
+    - vagrant
+    - vim
+    - virtualbox
