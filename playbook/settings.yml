@@ -3,11 +3,12 @@
 ---
 
 user: ubuntu
-vimrc_repo: "https://github.com/pajuna/vimrc.git"
+vimrc_repo: "https://github.com/aussielunix/vimrc.git"
 
-dotfiles_repo: "https://github.com/pajuna/dotfiles.git"
+dotfiles_repo: "https://github.com/aussielunix/dotfiles.git"
 dotfiles_files:
   - .alias
+  - .aws
   - .bash_logout
   - .bashrc
   - .gitconfig
