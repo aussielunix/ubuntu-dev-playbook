@@ -21,9 +21,9 @@ dotfiles_files:
   - .bash_profile
 
 rbenv_ruby_versions:
-  - 2.1.5
   - 2.2.3
-rbenv_default_ruby_version: 2.2.3
+  - 2.4.0
+rbenv_default_ruby_version: 2.4.0
 
 misc_packages:
   - arandr
