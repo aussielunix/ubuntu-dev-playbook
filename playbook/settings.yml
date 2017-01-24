@@ -7,9 +7,10 @@ vimrc_repo: "git@github.com:aussielunix/vimrc.git"
 
 dotfiles_repo: "git@github.com:aussielunix/dotfiles.git"
 dotfiles_files:
-  - .alias
   - .aws
+  - .bash_alias
   - .bash_logout
+  - .bash_profile
   - .bashrc
   - .gitconfig
   - .gitignore
@@ -18,7 +19,6 @@ dotfiles_files:
   - .profile.d
   - .purple
   - .themes
-  - .bash_profile
 
 rbenv_ruby_versions:
   - 2.2.3
