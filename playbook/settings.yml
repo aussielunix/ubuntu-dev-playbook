@@ -2,7 +2,7 @@
 
 ---
 
-user: ubuntu
+user: lunix
 vimrc_repo: "git@github.com:aussielunix/vimrc.git"
 
 dotfiles_repo: "git@github.com:aussielunix/dotfiles.git"
