@@ -25,7 +25,6 @@
     - bosh-init
     - capotej.packagecloud
     - cf-cli
-    - conky
     - direnv
     - dropbox
     - fly
@@ -36,7 +35,7 @@
     - misc      # generic role / dumping ground
     - ntp
     - rbenv
-    - slack
+#    - slack
     - terminator
     - terraform
     - vagrant
