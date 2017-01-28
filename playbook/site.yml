@@ -10,13 +10,14 @@
     - settings.yml
 
   pre_tasks:
-    - name: create /bin/src/tmp dir
+    - name: create /bin/src/tmp/.config dir
       file: path="{{item}}" state=directory mode=0755
       with_items:
         - ~/bin
         - ~/src
         - ~/pkg
         - ~/tmp
+        - ~/.config
 
   roles:
     - dotfiles  # Must be first
