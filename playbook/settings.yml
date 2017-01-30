@@ -28,6 +28,7 @@ lubuntu_config_files:
   - pcmanfm
 
 rbenv_ruby_versions:
+  - 2.1.5
   - 2.2.3
   - 2.4.0
 rbenv_default_ruby_version: 2.4.0
