@@ -51,6 +51,7 @@ misc_packages:
   - tree
   - ubuntu-restricted-extras
   - unzip
+  - xpdf
   - xscreensaver
   - xscreensaver-screensaver-bsod
 
