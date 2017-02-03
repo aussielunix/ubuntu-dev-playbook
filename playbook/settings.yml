@@ -35,7 +35,9 @@ rbenv_default_ruby_version: 2.4.0
 
 misc_packages:
   - arandr
+  - composer
   - curl
+  - drush
   - git
   - imagemagick
   - ipcalc
@@ -46,6 +48,7 @@ misc_packages:
   - libmysqlclient-dev
   - mc
   - nmap
+  - php-xml
   - sasl2-bin
   - screen
   - tree
