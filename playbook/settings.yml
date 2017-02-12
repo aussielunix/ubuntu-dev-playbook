@@ -39,6 +39,7 @@ misc_packages:
   - curl
   - drush
   - git
+  - gparted
   - imagemagick
   - ipcalc
   - jwhois
@@ -51,6 +52,7 @@ misc_packages:
   - php-xml
   - sasl2-bin
   - screen
+  - tshark
   - tree
   - ubuntu-restricted-extras
   - unzip
