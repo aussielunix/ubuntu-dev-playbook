@@ -37,6 +37,7 @@ misc_packages:
   - arandr
   - composer
   - curl
+  - dnstracer
   - drush
   - git
   - gparted
