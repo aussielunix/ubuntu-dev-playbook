@@ -51,6 +51,7 @@ misc_packages:
   - mc
   - nmap
   - php-xml
+  - rst2pdf
   - sasl2-bin
   - screen
   - tshark
