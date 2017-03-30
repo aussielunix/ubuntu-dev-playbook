@@ -49,7 +49,10 @@ misc_packages:
   - libsqlite3-dev
   - libmysqlclient-dev
   - mc
+  - network-manager-openvpn-gnome
   - nmap
+  - openvpn
+  - openvpn-blacklist
   - php-xml
   - rst2pdf
   - sasl2-bin
