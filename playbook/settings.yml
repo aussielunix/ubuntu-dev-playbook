@@ -20,6 +20,22 @@ dotfiles_files:
   - .purple
   - .themes
 
+budgie_config_files:
+  - budgie-welcome
+  - dconf
+  - evolution
+  - gtk-3.0
+  - ibus
+  - libaccounts-glib
+  - nautilus
+  - plank
+  - user-dirs.dirs
+  - user-dirs.locale
+
+budgie_files:
+  - .local
+  - .dmrc
+
 lubuntu_config_files:
   - gtk-3.0
   - lxpanel
