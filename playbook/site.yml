@@ -24,10 +24,10 @@
     - aussielunix.python
     - awscli
     - bosh-init
+    - budgie-desktop
     - capotej.packagecloud
     - cf-cli
     - direnv
-    - dropbox
     - fly
     - googlechrome
     - keepass2
@@ -43,3 +43,4 @@
     - vagrant
     - vim
     - virtualbox
+      #    - dropbox
