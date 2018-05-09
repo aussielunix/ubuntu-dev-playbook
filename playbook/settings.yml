@@ -94,9 +94,9 @@ terraform:
   checksum: "sha256:131c440263382c79c7f783b70ff35cd1d03eb31c44f7738d153d95a0b8436ac9."
 
 fly:
-  url: "https://github.com/concourse/fly/releases/download/v2.3.2-rc.2/fly_linux_amd64"
+  url: "https://github.com/concourse/concourse/releases/download/v3.13.0/fly_linux_amd64"
   dest: "{{ lookup('env','HOME')}}/bin/fly"
-  checksum: "sha256:86876eca3835effd86a79ffc06810df14dbeddaeb0956ddc52278be8e63e0ddf"
+  checksum: "sha1:723817a921f3d3833497ea0e3ef114395451d029"
 
 golang:
   url: "https://dl.google.com/go/go1.10.2.linux-amd64.tar.gz"
