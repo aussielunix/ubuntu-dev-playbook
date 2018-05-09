@@ -93,11 +93,6 @@ terraform:
   install_dest: "{{ lookup('env','HOME')}}/bin/"
   checksum: "sha256:131c440263382c79c7f783b70ff35cd1d03eb31c44f7738d153d95a0b8436ac9."
 
-boshinit:
-  url: "https://s3.amazonaws.com/bosh-init-artifacts/bosh-init-0.0.98-linux-amd64"
-  dest: "{{ lookup('env','HOME')}}/bin/bosh-init"
-  checksum: "sha256:1800652511bcad3864d3062b19d1ac194f4176e1f9a1d3b136499e4aef15db34"
-
 fly:
   url: "https://github.com/concourse/fly/releases/download/v2.3.2-rc.2/fly_linux_amd64"
   dest: "{{ lookup('env','HOME')}}/bin/fly"
