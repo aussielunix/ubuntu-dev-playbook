@@ -103,3 +103,8 @@ fly:
   dest: "{{ lookup('env','HOME')}}/bin/fly"
   checksum: "sha256:86876eca3835effd86a79ffc06810df14dbeddaeb0956ddc52278be8e63e0ddf"
 
+golang:
+	url: "https://dl.google.com/go/go1.10.2.linux-amd64.tar.gz"
+  tmp_dest: "/tmp/go-linux-amd64.tar.gz"
+  install_dest: "/usr/local"
+  checksum: "sha256:4b677d698c65370afa33757b6954ade60347aaca310ea92a63ed717d7cb0c2ff"
