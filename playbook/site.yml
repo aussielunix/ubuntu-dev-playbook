@@ -23,6 +23,7 @@
     - dotfiles  # Must be first
     - aussielunix.python
     - awscli
+    - bbl
     - bosh
     - budgie-desktop
     - capotej.packagecloud
