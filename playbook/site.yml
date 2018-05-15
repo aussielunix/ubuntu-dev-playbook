@@ -38,6 +38,7 @@
     - ntp
     - openconnect
     - rbenv
+    - signal
     - slack
     - terminator
     - terraform
