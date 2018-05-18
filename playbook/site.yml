@@ -28,6 +28,7 @@
     - budgie-desktop
     - capotej.packagecloud
     - cf-cli
+    - credalert
     - direnv
     - fly
     - googlechrome
