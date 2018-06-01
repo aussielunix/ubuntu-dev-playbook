@@ -29,6 +29,7 @@
     - cf-cli
     - credalert
     - direnv
+    - dropbox
     - fly
     - git
     - googlechrome
@@ -46,4 +47,3 @@
     - vagrant
     - vim
     - virtualbox
-      #    - dropbox
