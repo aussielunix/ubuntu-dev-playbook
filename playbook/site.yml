@@ -25,6 +25,7 @@
     - awscli
     - bbl
     - bosh
+    - budgie-desktop
     - capotej.packagecloud
     - cf-cli
     - credalert
