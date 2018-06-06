@@ -119,5 +119,13 @@ boshcli:
   dest: "{{ lookup('env','HOME')}}/bin/bosh"
   checksum: "sha1:ccc893bab8b219e9e4a628ed044ebca6c6de9ca0"
 
+
+zoom:
+  deb:
+    url: "https://zoom.us/client/latest/zoom_amd64.deb"
+    sha256: "f040f867df2c10162cdced58f85c66c3eb09c1277fc4aa4faade4feb1c9dd784."
+    dest: "/tmp/zoom_amd64.deb"
+
+# install git from PPA for the latest version
 git:
   ppa: true
