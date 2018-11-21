@@ -84,9 +84,9 @@ misc_packages:
 
 dropbox:
   deb:
-    url: "https://linux.dropbox.com/packages/ubuntu/dropbox_2015.10.28_amd64.deb"
-    sha256: "f9780cce3725ee307cdad8a835300e89483504059d302b3c6f91fe5cac0a5411"
-    dest: "/tmp/dropbox_2015.10.28_amd64.deb"
+    url: "https://linux.dropbox.com/packages/ubuntu/dropbox_2018.11.08_amd64.deb"
+    sha256: "9519428713556d8ce88fa705c272c0ff06867458371e68baf89564d22f9d6c9d."
+    dest: "/tmp/dropbox_2018.11.08_amd64.deb"
   tar:
     url: "https://www.dropbox.com/download?plat=lnx.x86_64"
     sha256: "087e8fbcc678ad58cecc7a7bbec185f043f59a27ff0212220e170730255da0b9."
