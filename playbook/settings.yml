@@ -123,7 +123,7 @@ boshcli:
 zoom:
   deb:
     url: "https://zoom.us/client/latest/zoom_amd64.deb"
-    sha256: "f040f867df2c10162cdced58f85c66c3eb09c1277fc4aa4faade4feb1c9dd784."
+    sha256: "7d0559e2f7bf42f0c2becc7fbf91b20ca2e7ec373c941fca21314169de9c7ef4."
     dest: "/tmp/zoom_amd64.deb"
 
 # install git from PPA for the latest version
