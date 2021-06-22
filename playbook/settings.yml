@@ -19,10 +19,9 @@ dotfiles_files:
   - .profile.d
 
 rbenv_ruby_versions:
-  - 2.1.5
-  - 2.2.3
-  - 2.4.0
-rbenv_default_ruby_version: 2.4.0
+  - 2.7.3
+  - 3.0.1
+rbenv_default_ruby_version: 3.0.1
 
 misc_packages:
   - curl
