@@ -29,7 +29,6 @@ misc_packages:
   - git
   - imagemagick
   - ipcalc
-  - jwhois
   - jq
   - libavcodec-extra
   - libsqlite3-dev
@@ -41,5 +40,5 @@ misc_packages:
   - screen
   - tshark
   - tree
-  - ubuntu-restricted-extras
   - unzip
+  - whois
