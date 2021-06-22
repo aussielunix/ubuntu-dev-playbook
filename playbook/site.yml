@@ -1,7 +1,6 @@
 ##
-# Ansible playbook for setting up a Lubuntu Trusty LTS Workstation
+# Ansible playbook for setting up your Ubuntu (terminal only) Environment
 #
-
 ---
 - hosts: local
   become: no
@@ -10,43 +9,20 @@
     - settings.yml
 
   pre_tasks:
-    - name: create /bin/src/tmp/.config dir
+    - name: create /bin/src/tmp dir
       file: path="{{item}}" state=directory mode=0755
       with_items:
         - ~/bin
         - ~/src
         - ~/pkg
         - ~/tmp
-        - ~/.config
 
   roles:
-    - dotfiles  # Must be first
+    - dotfiles                        # Must be first
     - aussielunix.python
-    - awscli
-    - bbl
-    - bosh
-    - budgie-desktop
     - capotej.packagecloud
-    - cf-cli
-    - credalert
     - direnv
-    - dropbox
-    - fly
-    - git
-    - golang
-    - googlechrome
-    - keepass2
-    - libreoffice
     - mkdocs
-    - misc      # generic role / dumping ground
-    - ntp
-    - openconnect
-    - rbenv
-    - signal
-    - slack
-    - terminator
-    - terraform
-    - vagrant
-    - vim
-    - virtualbox
-    - zoom
+    - misc                            # generic role / dumping ground
+    - rbenv                           # install rbenv and ruby
+    - vim                             # vim + vim dotfiles
