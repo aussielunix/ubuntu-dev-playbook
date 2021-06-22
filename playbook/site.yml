@@ -19,10 +19,7 @@
 
   roles:
     - dotfiles                        # Must be first
-    - aussielunix.python
-    - capotej.packagecloud
     - direnv
-    - mkdocs
     - misc                            # generic role / dumping ground
     - rbenv                           # install rbenv and ruby
     - vim                             # vim + vim dotfiles
