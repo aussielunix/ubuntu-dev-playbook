@@ -6,7 +6,7 @@
   become: no
 
   vars_files:
-    - settings.yml
+    - default.config.yml
 
   pre_tasks:
     - name: create /bin/src/tmp dir
@@ -16,10 +16,13 @@
         - ~/src
         - ~/pkg
         - ~/tmp
+  tasks:
+    - import_tasks: tasks/misc-packages.yml
+      tags: ['misc']
 
   roles:
-    - dotfiles                        # Must be first
-    - direnv
-    - misc                            # generic role / dumping ground
-    - rbenv                           # install rbenv and ruby
-    - vim                             # vim + vim dotfiles
+    - geerlingguy.dotfiles             # Must be first
+    - zzet.rbenv
+#    - direnv
+#    - rbenv                           # install rbenv and ruby
+#    - vim                             # vim + vim dotfiles

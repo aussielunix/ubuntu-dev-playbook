@@ -1,0 +1,10 @@
+---
+roles:
+  - name: geerlingguy.dotfiles
+  - name: zzet.rbenv
+
+collections: []
+
+#collections:
+#  - name: https://github.com/aussielunix/ansible-collection-mac.git,1.1.3
+#    type: git

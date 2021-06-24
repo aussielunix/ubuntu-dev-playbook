@@ -1,3 +1,7 @@
+!roles/.gitkeep
+roles/*
+roles/*
 *.retry
 tmp/
 ansible.log
+galaxy_token
