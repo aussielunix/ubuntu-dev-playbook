@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-MYSTATION_REPO="https://github.com/aussielunix/mystation.git"
+MYSTATION_REPO="git@github.com:aussielunix/mystation.git"
 
 #######################################################################################
 cat <<End-of-message
@@ -33,22 +33,15 @@ then
   sudo -E DEBIAN_FRONTEND=noninteractive apt-get -y install ansible >> /tmp/pajuna-bootstrap.log 2>&1
 fi
 
-# clone pajuna/mystation if ~/.ansible doesn't alredy exist
-if [[ ! -d ~/.ansible ]]
-then
-  echo -e "\e[32mThe folder \".ansible\" doesn't exist. Creating....\e[0m"
-  git clone ${MYSTATION_REPO} ~/.ansible  >> /tmp/pajuna-bootstrap.log 2>&1
-fi
-
-mkdir -p ~/.pajuna/upstream ~/.pajuna/myfork
-echo -e "\e[32mCloning https://github.com/pajuna/Ubuntu-LTS.git to ~/.pajuna/upstream .......\e[0m"
-git clone https://github.com/pajuna/Ubuntu-LTS.git ~/.pajuna/upstream >> /tmp/pajuna-bootstrap.log 2>&1
+# clone pajuna/mystation if ~/.pajuna doesn't alredy exist
+echo -e "\e[32mThe folder \".pajuna\" doesn't exist. Creating....\e[0m"
+git clone ${MYSTATION_REPO} ~/.pajuna  >> /tmp/pajuna-bootstrap.log 2>&1
 
 # echo out welcome message etc
 echo
 echo -e "\e[36mBootstrap is complete....\e[0m"
 echo -e "\e[36mYou should set an alias up for pajuna....\e[0m]"
-echo -e "\e[92malias pajuna='ANSIBLE_CONFIG=~/.ansible/ansible.cfg ansible-playbook -i ~/.ansible/inventory ~/.ansible/playbook/site.yml' \e[0m"
+echo -e "\e[92malias pajuna='ANSIBLE_CONFIG=~/.pajuna/ansible.cfg ansible-playbook -i ~/.pajuna/inventory ~/.pajuna/playbook/site.yml' \e[0m"
 echo -e "\nNow run pajuna -K....\n" >> /tmp/pajuna-bootstrap.log 2>&1
 
 # vim: autoindent tabstop=2 shiftwidth=2 expandtab softtabstop=2 filetype=sh
