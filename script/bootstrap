@@ -33,7 +33,7 @@ then
   sudo -E DEBIAN_FRONTEND=noninteractive apt-get -y install ansible >> /tmp/pajuna-bootstrap.log 2>&1
 fi
 
-# clone pajuna/mystation if ~/.pajuna doesn't alredy exist
+# clone pajuna/mystation
 echo -e "\e[32mThe folder \".pajuna\" doesn't exist. Creating....\e[0m"
 git clone ${MYSTATION_REPO} ~/.pajuna  >> /tmp/pajuna-bootstrap.log 2>&1
 
@@ -41,7 +41,7 @@ git clone ${MYSTATION_REPO} ~/.pajuna  >> /tmp/pajuna-bootstrap.log 2>&1
 echo
 echo -e "\e[36mBootstrap is complete....\e[0m"
 echo -e "\e[36mYou should set an alias up for pajuna....\e[0m]"
-echo -e "\e[92malias pajuna='ANSIBLE_CONFIG=~/.pajuna/ansible.cfg ansible-playbook -i ~/.pajuna/inventory ~/.pajuna/playbook/site.yml' \e[0m"
+echo -e "\e[92malias pajuna='ANSIBLE_CONFIG=~/.pajuna/ansible.cfg ansible-playbook -i ~/.pajuna/inventory ~/.pajuna/main.yml' \e[0m"
 echo -e "\nNow run pajuna -K....\n" >> /tmp/pajuna-bootstrap.log 2>&1
 
 # vim: autoindent tabstop=2 shiftwidth=2 expandtab softtabstop=2 filetype=sh
