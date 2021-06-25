@@ -22,7 +22,7 @@
 
   roles:
     - geerlingguy.dotfiles             # Must be first
-    - zzet.rbenv
+    - aussielunix.rbenv
 #    - direnv
 #    - rbenv                           # install rbenv and ruby
 #    - vim                             # vim + vim dotfiles
