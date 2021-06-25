@@ -1,0 +1,28 @@
+##
+# Ansible playbook for setting up your Ubuntu (terminal only) Environment
+#
+---
+- hosts: local
+  become: no
+
+  vars_files:
+    - default.config.yml
+
+  pre_tasks:
+    - name: create /bin/src/tmp dir
+      file: path="{{item}}" state=directory mode=0755
+      with_items:
+        - ~/bin
+        - ~/src
+        - ~/pkg
+        - ~/tmp
+  tasks:
+    - import_tasks: tasks/misc-packages.yml
+      tags: ['misc']
+
+  roles:
+    - geerlingguy.dotfiles             # Must be first
+    - aussielunix.rbenv
+#    - direnv
+#    - rbenv                           # install rbenv and ruby
+#    - vim                             # vim + vim dotfiles

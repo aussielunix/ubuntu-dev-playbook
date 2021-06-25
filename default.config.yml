@@ -1,0 +1,52 @@
+# my workstation specific settings.
+
+---
+
+user: ubuntu
+vimrc_repo: "git@github.com:aussielunix/vimrc.git"
+
+dotfiles_repo: "git@github.com:aussielunix/dotfiles.git"
+dotfiles_repo_version: master
+dotfiles_repo_local_destination: ~/.dotfiles
+dotfiles_files:
+  - .aws
+  - .bash_alias
+  - .bash_logout
+  - .bash_profile
+  - .bashrc
+  - .gitconfig
+  - .gitignore
+  - .gnupg
+  - .packagecloud
+  - .profile.d
+
+rbenv_owner: 'ubuntu'
+rbenv_users: ['ubuntu']
+rbenv_user_profile: False
+rbenv:
+  env: user
+  version: v1.1.2
+  default_ruby: 3.0.1
+  rubies:
+    - version: 2.7.3
+    - version: 3.0.1
+
+misc_packages:
+  - curl
+  - dnstracer
+  - git
+  - imagemagick
+  - ipcalc
+  - jq
+  - libavcodec-extra
+  - libsqlite3-dev
+  - libmysqlclient-dev
+  - mc
+  - nmap
+  - rst2pdf
+  - sasl2-bin
+  - screen
+  - tshark
+  - tree
+  - unzip
+  - whois
