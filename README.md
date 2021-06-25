@@ -10,6 +10,8 @@ Makes use of [Pajuna](http://pajuna.io)
   * `scp -r ~/.ssh/id_rsa* ubuntu@newvm:~/.ssh/`
   * `ssh ubuntu@newvm chmod 0400 ~/.ssh`
   * `ssh ubuntu@newvm chmod 0644 ~/.ssh/id_rsa.pub`
+* ssh to newvm
+  * `ssh ubuntu@newvm`
 * Start an ssh-agent
   * `eval "$(ssh-agent -s)"`
 * add your ssh key to the agent
