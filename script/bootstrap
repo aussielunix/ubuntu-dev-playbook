@@ -42,6 +42,7 @@ echo
 echo -e "\e[36mBootstrap is complete....\e[0m"
 echo -e "\e[36mYou should set an alias up for pajuna....\e[0m]"
 echo -e "\e[92malias pajuna='ANSIBLE_CONFIG=~/.pajuna/ansible.cfg ansible-playbook -i ~/.pajuna/inventory ~/.pajuna/main.yml' \e[0m"
+echo -e "\nNow install the roles from Galaxy - cd ~/.pajuna && ansible-galaxy install -r requirements.yml...\n" >> /tmp/pajuna-bootstrap.log 2>&1
 echo -e "\nNow run pajuna -K....\n" >> /tmp/pajuna-bootstrap.log 2>&1
 
 # vim: autoindent tabstop=2 shiftwidth=2 expandtab softtabstop=2 filetype=sh
