@@ -6,17 +6,19 @@ Makes use of [Pajuna](http://pajuna.io)
 
 ## TL;DR
 
-`curl -Ls http://pajuna.it | bash`
-
-* Edit playbook/site.yml and add some roles
-* Edit playbook/settings.yml and add a bunch of info.
+* Copy your pub/private ssh key to the VM
+  * `scp -r ~/.ssh/id_rsa* ubuntu@newvm:~/.ssh/`
+  * `ssh ubuntu@newvm chmod 0400 ~/.ssh`
+  * `ssh ubuntu@newvm chmod 0644 ~/.ssh/id_rsa.pub`
 * Start an ssh-agent
   * `eval "$(ssh-agent -s)"`
 * add your ssh key to the agent
   * `ssh-add`
-* run `pajuna -K`
+* `curl -Ls http://pajuna.it | bash`
+* Edit default.config.yml (optional)
+* run `pajuna`
 ```bash
-$ pajuna -K
+$ pajuna
 ```
 
 ## What is Pajuna
@@ -31,60 +33,6 @@ This includes remastering the Ubuntu installer iso through to installing and man
 * not rely on any bespoke software that is at risk of becoming abandonware
 * Waiting for your contribution upstream shouldn't slow you down
 
-## Directory layout
-
-The following directories are used
-
-* **~/.ansible**
-    * This is a clone of YOUR version of [pajuna/mystation](https://github.com/pajuna/mystation)
-* **~/.ansible/roles**
-    * This is where private roles belong.
-    * These roles take precedence over all others.
-* **~/.pajuna/myfork**
-    * Your FORK of [pajuna/Ubuntu-LTS](https://github.com/pajuna/Ubuntu-LTS)
-    * This IS to be edited by you)
-    * Send PR's from this to upstream
-* **~/.pajuna/upstream**
-    * Upstream clone of [pajuna/Ubuntu-LTS](https://github.com/pajuna/Ubuntu-LTS)
-    * This is not to be edited by you)
-* **~/.dotfiles**
-    * Self explanitory but the Pajuna roles all assume your dotfiles is a [git directory](https://github.com/pajuna/dotfiles)
-* **~/.vim**
-    * Self explanitory but the Pajuna roles assume your .vim directory is a [git directory](https://github.com/pajuna/vimrc)
-
-Ansible will look for roles in the following places, in order:
-
-* ~/.ansible/roles
-* ~/.pajuna/myfork
-* ~/.pajuna/upstream
-
-If you want to make a change to a role in the Pajuna [Ubuntu LTS](https://github.com/pajuna/Ubuntu-LTS) repo then fork it, clone into ~/.pajuna/myfork and hack on in in a branch and submit a PR to upstream.
-
-## Getting Started
-
-With a clean fresh minimal install of Ubuntu LTS the following bootstrap script is all you need to get up and running with Pajuna.
-
-```bash
-curl -Ls http://pajuna.it/ | bash
-```
-This bootstrap script will:
-  > add the Ansible PPA  
-	  install Ansible from PPA  
-    `git clone https://github.com/pajuna/mystation.git ~/.ansible`  
-    `git clone https://github.com/pajuna/Ubuntu-LTS.git ~/.pajuna/upstream`  
-
-* Edit playbook/site.yml and add some roles
-* Edit playbook/settings.yml and add a bunch of info.
-* Start an ssh-agent
-  * `eval "$(ssh-agent -s)"`
-* add your ssh key to the agent
-  * `ssh-add`
-* run `pajuna -K`
-```bash
-$ pajuna -K
-```
-
-Each role in [pajuna/Ubuntu-LTS](https://github.com/pajuna/Ubuntu-LTS) that exposes any settings should have both a `defaults/main.yml` and a README.md with some info about what you need in your settings.yml
 <br />
 <br />
 **NOTE** You can create yourself an automated Ubuntu installer using the [Pajuna automated iso generator](https://github.com/pajuna/ubuntu-custom-iso)
@@ -94,7 +42,7 @@ Each role in [pajuna/Ubuntu-LTS](https://github.com/pajuna/Ubuntu-LTS) that expo
     <th>Author</th><td>Mick Pollard (aussielunix at g mail dot com)</td>
   </tr>
   <tr>
-    <th>Copyright</th><td>Copyright (c) 2017 by Mick Pollard</td>
+    <th>Copyright</th><td>Copyright (c) 2021 by Mick Pollard</td>
   </tr>
   <tr>
     <th>License</th><td>Distributed under the MIT License, see <a href="https://github.com/pajuna/mystation/blob/master/LICENSE">LICENSE</a></td>
