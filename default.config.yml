@@ -22,7 +22,7 @@ dotfiles_files:
 
 rbenv_owner: 'ubuntu'
 rbenv_users: ['ubuntu']
-rbenv_user_profile: False
+rbenv_user_profile: false
 rbenv:
   env: user
   version: v1.1.2
