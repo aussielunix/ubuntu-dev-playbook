@@ -9,6 +9,10 @@
     - default.config.yml
 
   pre_tasks:
+    - name: Include playbook custom configuration
+      include_vars: "{{ item }}"
+      with_fileglob:
+        "{{ playbook_dir }}/config.yml"
     - name: create /bin/src/tmp dir
       file: path="{{ item }}" state=directory mode=0755
       with_items:
