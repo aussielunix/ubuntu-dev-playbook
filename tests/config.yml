@@ -1,0 +1,11 @@
+---
+
+user: ubuntu
+
+misc_packages:
+  - curl
+  - dnstracer
+  - git
+  - imagemagick
+  - ipcalc
+  - jq

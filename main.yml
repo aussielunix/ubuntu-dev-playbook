@@ -21,8 +21,9 @@
       tags: ['misc']
 
   roles:
-    - geerlingguy.dotfiles             # Must be first
+    - role: geerlingguy.dotfiles             # Must be first
+      when: configure_dotfiles
+      tags: ['dotfiles']
     - aussielunix.rbenv
-#    - direnv
-#    - rbenv                           # install rbenv and ruby
-#    - vim                             # vim + vim dotfiles
+      when: rbenv
+      tags: ]'rbenv', 'ruby']
