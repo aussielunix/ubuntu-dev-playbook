@@ -22,8 +22,8 @@
 
   roles:
     - role: geerlingguy.dotfiles             # Must be first
-      when: configure_dotfiles
+      when: configure_dotfiles | bool
       tags: ['dotfiles']
     - role: aussielunix.rbenv
-      when: rbenv
+      when: rbenv | bool
       tags: ['rbenv', 'ruby']
