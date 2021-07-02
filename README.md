@@ -29,7 +29,7 @@ pajuna
 
 ## Author
 
-This project was created by [Mick Pollard](https://aussielunix.io) [@aussielunix](https://twitter.com/aussielunix) and was adapted from [geerlingguy/mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook) for Ubuntu.
+This project was created by [Mick Pollard](https://aussielunix.io) [@aussielunix](https://twitter.com/aussielunix) and was adapted for Ubuntu from [geerlingguy/mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook).
 
 ## License
 
