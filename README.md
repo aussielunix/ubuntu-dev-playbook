@@ -7,12 +7,16 @@ This playbook installs and configures the software I use on my headless Ubuntu L
 This assumes you have ssh keys setup with ssh-agent or agent-forwarding. (See below if you do not)
 
 * `curl -Ls http://pajuna.it | bash`
-* create your own `~/.pajuna/config.yml` based off of `~/.pajuna/default.config.yml` (optional)
 * run `pajuna`
 
 ```bash
 pajuna
 ```
+
+## Overriding Defaults
+
+Not everyone's development environment and preferred software configuration is the same.  
+You can override any of the defaults configured in `default.config.yml` by creating a `config.yml` file and setting the overrides in that file.
 
 ## How to run ssh-agent on your Ubuntu VM during bootstrapping
 
