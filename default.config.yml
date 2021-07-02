@@ -5,6 +5,7 @@
 user: ubuntu
 vimrc_repo: "git@github.com:aussielunix/vimrc.git"
 
+configure_dotfiles: true
 dotfiles_repo: "git@github.com:aussielunix/dotfiles.git"
 dotfiles_repo_version: master
 dotfiles_repo_local_destination: ~/.dotfiles
