@@ -1,15 +1,16 @@
 ---
 name: CI
-'on':
+"on":
   pull_request:
   push:
+    paths-ignore:
+      - "README.md"
     branches:
       - master
   schedule:
     - cron: "0 5 * * 4"
 
 jobs:
-
   lint:
     name: Lint
     runs-on: ubuntu-latest
@@ -20,7 +21,7 @@ jobs:
       - name: Set up Python 3.
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Install test dependencies.
         run: pip3 install ansible ansible-lint
@@ -53,7 +54,7 @@ jobs:
       - name: Test the playbook.
         run: ansible-playbook main.yml
         env:
-          ANSIBLE_FORCE_COLOR: '1'
+          ANSIBLE_FORCE_COLOR: "1"
 
       - name: Idempotence check.
         run: |
@@ -61,4 +62,4 @@ jobs:
           ansible-playbook main.yml | tee -a ${idempotence}
           tail ${idempotence} | grep -q 'changed=0.*failed=0' && (echo 'Idempotence test: pass' && exit 0) || (echo 'Idempotence test: fail' && exit 1)
         env:
-          ANSIBLE_FORCE_COLOR: '1'
+          ANSIBLE_FORCE_COLOR: "1"
