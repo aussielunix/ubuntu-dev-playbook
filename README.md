@@ -2,7 +2,7 @@
 
 This playbook installs and configures the software I use on my headless Ubuntu Linux VM for web and software development.
 
-##  Installation
+## Installation
 
 * Copy your pub/private ssh key to the VM
   * `scp -r ~/.ssh/id_rsa* ubuntu@newvm:~/.ssh/`
@@ -17,8 +17,9 @@ This playbook installs and configures the software I use on my headless Ubuntu L
 * `curl -Ls http://pajuna.it | bash`
 * Edit default.config.yml (optional)
 * run `pajuna`
+
 ```bash
-$ pajuna
+pajuna
 ```
 
 <br />
@@ -28,6 +29,8 @@ $ pajuna
 <table>
   <tr>
     <th>Author</th><td>Mick Pollard (aussielunix at g mail dot com)</td>
+  </tr>
+  <tr>
     <th>Credit</th><td>Adapted from [geerlingguy/mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook) for Ubuntu</td>
   </tr>
   <tr>
