@@ -1,6 +1,8 @@
 ---
 
 user: ubuntu
+configure_dotfiles: false
+rbenv: false
 
 misc_packages:
   - curl
