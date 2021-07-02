@@ -26,4 +26,4 @@
       tags: ['dotfiles']
     - role: aussielunix.rbenv
       when: rbenv
-      tags: ]'rbenv', 'ruby']
+      tags: ['rbenv', 'ruby']
