@@ -18,7 +18,6 @@
       with_items:
         - ~/bin
         - ~/src
-        - ~/pkg
         - ~/tmp
   tasks:
     - import_tasks: tasks/misc-packages.yml
