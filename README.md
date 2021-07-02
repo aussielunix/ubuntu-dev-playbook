@@ -4,7 +4,7 @@ This playbook installs and configures the software I use on my headless Ubuntu L
 
 ## Installation
 
-**Assumes you have ssh keys setup with ssh-agent or agent-forwarding**
+This assumes you have ssh keys setup with ssh-agent or agent-forwarding. (See below if you do not)
 
 * `curl -Ls http://pajuna.it | bash`
 * create your own `~/.pajuna/config.yml` based off of `~/.pajuna/default.config.yml` (optional)
