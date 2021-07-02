@@ -18,10 +18,12 @@ pajuna
 
 * Copy your pub/private ssh key to the VM
   * `scp -r ~/.ssh/id_rsa* ubuntu@newvm:~/.ssh/`
-  * `ssh ubuntu@newvm chmod 0400 ~/.ssh`
-  * `ssh ubuntu@newvm chmod 0644 ~/.ssh/id_rsa.pub`
 * ssh to newvm
   * `ssh ubuntu@newvm`
+* Fix ssh key permissions
+  * `chmod 0700 .ssh`
+  * `chmod 0400 .ssh/id_rsa`
+  * `chmod 0644 .ssh/id_rsa.pub`
 * Start an ssh-agent
   * `eval "$(ssh-agent -s)"`
 * add your ssh key to the agent
