@@ -2,6 +2,7 @@
 roles:
   - name: geerlingguy.dotfiles
   - name: aussielunix.rbenv
+  - name: robertdebock.hashicorp
 
 collections: []
 
