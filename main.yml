@@ -33,3 +33,4 @@
     - role: robertdebock.hashicorp
       when: hashicorp_products
       tags: ['hashicorp', 'terraform', 'packer']
+    - role: diodonfrost.terragrunt
