@@ -1,8 +1,13 @@
 ---
-
 user: ubuntu
 configure_dotfiles: false
 rbenv: false
+
+hashicorp_products:
+  - name: terraform
+  - name: packer
+
+terragrunt_path: "$HOME/bin/"
 
 misc_packages:
   - curl
