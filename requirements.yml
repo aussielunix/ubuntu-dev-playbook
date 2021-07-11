@@ -2,7 +2,7 @@
 roles:
   - name: geerlingguy.dotfiles
   - name: aussielunix.rbenv
-  - name: robertdebock.hashicorp
+  - name: aussielunix.hashicorp
   - name: diodonfrost.terragrunt
 
 collections: []

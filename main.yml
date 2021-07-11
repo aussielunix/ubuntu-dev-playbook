@@ -30,7 +30,7 @@
     - role: aussielunix.rbenv
       when: rbenv
       tags: ['rbenv', 'ruby']
-    - role: robertdebock.hashicorp
+    - role: aussielunix.hashicorp
       when: hashicorp_products
       tags: ['hashicorp', 'terraform', 'packer']
     - role: diodonfrost.terragrunt
