@@ -34,3 +34,5 @@
       when: hashicorp_products
       tags: ['hashicorp', 'terraform', 'packer']
     - role: diodonfrost.terragrunt
+    - role: darkwizard242.awsvault
+      tags: ['awsvault','aws']

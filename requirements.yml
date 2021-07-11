@@ -4,6 +4,7 @@ roles:
   - name: aussielunix.rbenv
   - name: aussielunix.hashicorp
   - name: diodonfrost.terragrunt
+  - name: darkwizard242.awsvault
 
 collections: []
 
