@@ -7,8 +7,6 @@ hashicorp_products:
   - name: terraform
   - name: packer
 
-terragrunt_path: "$HOME/bin/"
-
 misc_packages:
   - curl
   - dnstracer

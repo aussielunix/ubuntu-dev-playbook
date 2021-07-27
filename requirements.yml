@@ -3,11 +3,6 @@ roles:
   - name: geerlingguy.dotfiles
   - name: aussielunix.rbenv
   - name: aussielunix.hashicorp
-  - name: diodonfrost.terragrunt
   - name: darkwizard242.awsvault
 
 collections: []
-
-# collections:
-#  - name: https://github.com/aussielunix/ansible-collection-mac.git,1.1.3
-#    type: git
