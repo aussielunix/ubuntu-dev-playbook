@@ -41,6 +41,7 @@ misc_packages:
   - direnv
   - dnstracer
   - docker.io
+  - fortune-mod
   - git
   - imagemagick
   - ipcalc
@@ -56,5 +57,7 @@ misc_packages:
   - tshark
   - tree
   - unzip
+  - weechat
+  - weechat-scripts
   - whois
   - xclip
