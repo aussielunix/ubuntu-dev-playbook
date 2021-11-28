@@ -1,6 +1,6 @@
 ---
 
-user: ubuntu
+user: lunix
 vimrc_repo: "git@github.com:aussielunix/vimrc.git"
 
 configure_dotfiles: true
@@ -18,9 +18,10 @@ dotfiles_files:
   - .gnupg
   - .packagecloud
   - .profile.d
+  - .Xresources
 
-rbenv_owner: 'ubuntu'
-rbenv_users: ['ubuntu']
+rbenv_owner: 'lunix'
+rbenv_users: ['lunix']
 rbenv_user_profile: false
 rbenv:
   env: user
@@ -57,6 +58,7 @@ misc_packages:
   - tshark
   - tree
   - unzip
+  - vim
   - weechat
   - weechat-scripts
   - whois
