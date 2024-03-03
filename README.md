@@ -1,5 +1,14 @@
 # Ubuntu Linux Development Ansible Playbook
 
+**DEPRACATED**
+
+This is no longer in use as I am now using an Atomic OS
+
+* https://github.com/aussielunix/mystation
+* https://github.com/aussielunix/mytoolbx
+* https://github.com/aussielunix/dotfiles
+
+
 This playbook installs and configures the software I use on my headless Ubuntu Linux VM for web and software development.
 
 ## Installation
